@@ -22,7 +22,7 @@ const server = app.listen(process.env.PORT || 5000, () => {
 });
 require('./passport')(passport);
 
-mongoose.connect('mongodb://127.0.0.1:27017/botchat'); // connect to our database
+mongoose.connect('mongodb+srv://baole1508:Baole15081998:))@cluster0-rivpp.mongodb.net/chatbot_learnrussian?retryWrites=true'); // connect to our database
 /******************************************************** */
 
 app.get('/auth/facebook', passport.authenticate("facebook", { scope: ['email'] }));
