@@ -1,6 +1,6 @@
 const express = require('express');
-const mongoose = require('mongoose')
-const passport = require('passport') 
+//const mongoose = require('mongoose')
+//const passport = require('passport') 
 const session = require('express-session')
 const bodyParser = require('body-parser');
 var fs = require('fs');
@@ -10,15 +10,15 @@ let sendMessage = require('./webhook').sendMessage;
 let handlePostback = require('./webhook').handlePostback;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(passport.initialize());
-app.use(passport.session());
+//app.use(passport.initialize());
+//app.use(passport.session());
 app.use(session({
   secret:'31jda%4*/99=_)787',
   resave: true,
   saveUninitialized: true
 }));
 const server = app.listen(process.env.PORT || 5000, () => {
-  console.log('Express server listening on port %d in %s mode', server.address().port, app.settings.env);
+  console.log('Express server listening on port 5000');
 });
 //require('./passport')(passport);
 
@@ -30,6 +30,7 @@ const server = app.listen(process.env.PORT || 5000, () => {
 
 app.get('/',(req,res)=>{
    // res.redirect('/auth/facebook');
+   res.send('Hello');
 })
 /* For Facebook Validation */
 app.get('/webhook', (req, res) => {
