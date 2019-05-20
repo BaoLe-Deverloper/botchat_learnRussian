@@ -25,11 +25,11 @@ const server = app.listen(process.env.PORT || 5000, () => {
 //mongoose.connect('mongodb+srv://baole1508:<baole>@cluster0-rivpp.mongodb.net/chatbot_learnrussian'); // connect to our database
 /******************************************************** */
 
-app.get('/auth/facebook', passport.authenticate("facebook", { scope: ['email'] }));
-app.get('/auth/facebook/callbackfacebook', passport.authenticate('facebook', { failureRedirect: '/login' ,successRedirect:'https://m.me/AppLearnRussian'}));
+//app.get('/auth/facebook', passport.authenticate("facebook", { scope: ['email'] }));
+//app.get('/auth/facebook/callbackfacebook', passport.authenticate('facebook', { failureRedirect: '/login' ,successRedirect:'https://m.me/AppLearnRussian'}));
 
 app.get('/',(req,res)=>{
-    res.redirect('/auth/facebook');
+   // res.redirect('/auth/facebook');
 })
 /* For Facebook Validation */
 app.get('/webhook', (req, res) => {
