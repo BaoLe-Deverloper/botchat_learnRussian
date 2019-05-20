@@ -20,9 +20,9 @@ app.use(session({
 const server = app.listen(process.env.PORT || 5000, () => {
   console.log('Express server listening on port %d in %s mode', server.address().port, app.settings.env);
 });
-require('./passport')(passport);
+//require('./passport')(passport);
 
-mongoose.connect('mongodb+srv://baole1508:Baole15081998:))@cluster0-rivpp.mongodb.net/chatbot_learnrussian?retryWrites=true'); // connect to our database
+//mongoose.connect('mongodb+srv://baole1508:<baole>@cluster0-rivpp.mongodb.net/chatbot_learnrussian'); // connect to our database
 /******************************************************** */
 
 app.get('/auth/facebook', passport.authenticate("facebook", { scope: ['email'] }));
