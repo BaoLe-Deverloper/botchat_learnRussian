@@ -1,0 +1,7 @@
+{
+    "messagers":[
+        {"key":"Học từ mới","response":"Từ Привет Nghĩa là gì nào ?"},
+        {"key":"Bạn là ai ?","response":"Xin chào bạn tôi là bot chat ! Tôi được BaoLe_developer tạo ra giúp bạn học tiếng Nga tốt hơn."},
+        {"key":"Tao kb","response":"mày ngu như bò luôn.Nó nghĩa là << xin chào >, óc vật ạ!"}
+    ]
+}
